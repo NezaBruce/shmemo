@@ -1,12 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a scooper project to Provide hottest and latest news .
 
 ## Getting Started
+First, clone the project
+```bash
+git clone https://github.com/NezaBruce/shmemo.git
 
-First, run the development server:
+```
 
+Run the development server:
 ```bash
 yarn dev
-```
-    @bRUCETV
 
-The easiest way to seek for update new.
+```
+
+The easiest way to seek for update news.
