@@ -2,8 +2,9 @@ import React from 'react';
 
 import moment from 'moment';
 
-const PostDetail = ({ post }) => {
-  const getContentFragment = (index, text, obj, type) => {
+import { Post } from '../types';
+const PostDetail = ({ post } : {post:Post}) => {
+  const getContentFragment = (index:any, text:any, obj:any, type:any) => {
     let modifiedText = text;
 
     if (obj) {
@@ -68,8 +69,8 @@ const PostDetail = ({ post }) => {
             </div>
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-          {post.content.raw.children.map((typeObj, index) => {
-            const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
+          {post.content.raw.children.map((typeObj:any, index:any) => {
+            const children = typeObj.children.map((item:any, itemindex:any) => getContentFragment(itemindex:any, item.text:any, item:any));
 
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}

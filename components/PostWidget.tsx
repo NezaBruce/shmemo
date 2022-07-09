@@ -6,7 +6,8 @@ import Image from 'next/image'
 
 import { grpahCMSImageLoader } from '../utils';
 import { getRecentPosts, getSimilarPosts } from '../services';
-const PostWidget = ({categories,slug}) => {
+import { Slug } from '../types';
+const PostWidget = ({categories}:any,{slug}:{slug:Slug}) => {
     const [relatedPosts,setrelatedPosts]=useState([]);
     useEffect(()=>{
         if(slug){

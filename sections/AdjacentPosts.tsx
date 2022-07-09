@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import AdjacentPostCard from '../components/AdjacentPostCard'
 import { getAdjacentPosts } from '../services';
-const AdjacentPosts = ({createdAt,slug}) => {
+const AdjacentPosts = ({createdAt}:any,{slug}:any) => {
     const [adjacentPost,setAdjacentPost]=useState(null);
     const [dataLoaded,setDataLoaded]=useState(false);
     useEffect(()=>{
-        getAdjacentPosts(createdAt,slug).then((result)=>{
+        getAdjacentPosts(createdAt,slug).then((result:any)=>{
             setAdjacentPost(result);
             // setDataLoaded(true);
         })
